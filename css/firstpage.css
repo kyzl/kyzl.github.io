@@ -1,0 +1,41 @@
+
+body{
+	margin: 0; 
+	padding: 0;
+	border: 0;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	background-color: #3385ff;
+	padding-top: 40px;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 40pt;
+	text-align: center;
+}
+
+
+#choose_article{
+	margin-top: 20px;
+	border: #3385FF solid 2px;
+	padding: 10px;
+	width: 100%;	
+}
+
+ul{
+	list-style: none;
+	list-style-type: none;
+	margin-left: 30%;
+}
+
+ul > li{
+	margin-top: 70px;
+	font-size: 30pt;
+}
+
+
+ul > li >a{
+	text-decoration: none;
+}
