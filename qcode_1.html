@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body style="margin: 0px;">
+		<div style="border: 0px solid ; width: 90%; 
+		height: 1800px;margin: auto;border-radius:5px;
+		box-shadow:0 0 4px gray">
+	
+			<br />
+	
+			
+			
+			<div  style="text-align: center;font-family: microsoft YaHei;font-weight: bold; font-size: 2.3rem;">
+				<span id="name">程洛飞 &nbsp;</span><span id="xh">20201221900</span><br />
+				<p>
+				<span>计算机学院</span>
+			</div>
+			<div  style="text-align: center;font-weight: bold; font-size: 3.5rem;"> 
+			  <span id="time" style="font-family: microsoft YaHei;">2022</span>
+			</div>
+			
+			<div style="text-align: center;">
+				<br />
+				<img src="img/Qcode.jpg" style="width: 85%;"/>
+			</div>
+			
+			<br />
+			<div style="text-align: center;font-weight: bold; font-size: 3rem;color: red">
+
+				<span>有效时间：</span><span id="startTime"></span><span>至</span><br />
+				<span id="endTime"></span>
+				<br />
+			</div>
+			
+			<p></p>
+			<div style="text-align: center;font-weight: bold; font-size: 3.0rem;">
+				
+				<span >审核状态:&nbsp;&nbsp;审核通过 </span>
+			</div>
+			<br />
+			<div style="text-align: center;font-family: Arial; font-size: 3.2rem;
+			background-color: #ff0000;padding-top: 15px;padding-bottom: 15px;
+			margin-left: 30%;margin-right:30%;">
+				
+				<i>已进校</i>
+			</div>
+			
+			
+		</div>
+		
+		<script>
+			
+			function time(){
+				var currentTime = document.getElementById("time");
+				var myDate = new Date();
+				var month = myDate.getMonth()+1;
+				var hours = myDate.getHours();
+				var minutes = myDate.getMinutes();
+				var seconds = myDate.getSeconds();
+				var day = myDate.getDate();
+				if(month < 10){
+					month = "0"+month;
+				}
+				if(day < 10){
+					day = "0"+day;
+				}
+				
+				if(hours < 10){
+					hours = "0"+hours;
+				}
+				if(minutes < 10){
+					minutes = "0"+minutes;
+				}
+				if(seconds < 10){
+					seconds = "0"+seconds;
+				}
+				currentTime.innerText = month+"-"+day+" "+hours+":"+minutes+":"+seconds
+			}
+			
+			setInterval(time,1000);
+			
+			function deadline(){
+				var startTime = document.getElementById("startTime");
+				var endTime = document.getElementById("endTime");
+				
+				var myDate = new Date();
+				var year = myDate.getYear();
+				year = "20"+(year-100);
+				var month = myDate.getMonth()+1;	
+				var day = myDate.getDate();
+				var startDay = day-1;
+				var endDay = day+1;
+				if(month < 10){
+					month = "0"+month;
+				}
+				if(day < 10){
+					day = "0"+day;
+				}
+				
+				startTime.innerText = year+"-"+month+"-"+startDay+" "+"06:00";
+				endTime.innerText = year+"-"+month+"-"+endDay+" "+"22:00";
+			}
+			
+			deadline();
+		</script>
+	</body>
+</html>
