@@ -3,7 +3,7 @@
 
 (
 function(){
-	let test = function(){
+	let test1 = function(){
 		var domainStr2 = "http://e-office.nuist.edu.cn/infoplus/form/2492714/render";
 		var domain = window.location.href;
 		if(domainStr2 == domain){
@@ -47,7 +47,7 @@ function(){
 			}
 				}
 		}
-	setTimeout(test,2500);
-	document.body.addEventListener('click',test);	
+	setTimeout(test1,2500);
+	document.body.addEventListener('click',test1);	
 }
 )();
