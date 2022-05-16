@@ -40,19 +40,14 @@ function(){
 			lisheItem[9].style.display = 'none';
 			lisheItem[10].style.display = 'none';
 			lisheItem[11].style.display = 'none';
-					
-					var shijian = document.getElementsByClassName("form_remark_time");
-					for(let i = 4;i<9;i++){
-						time = shijian[i].innerText.split(' ')[1];
-						shijian[i].innerText = 	'2022-'+month+'-'+day+" "+time ;
-					}
+			var shijian = document.getElementsByClassName("form_remark_time");
+			for(let i = 4;i<9;i++){
+				time = shijian[i].innerText.split(' ')[1];
+				shijian[i].innerText = 	'2022-'+month+'-'+day+" "+time ;
+			}
 				}
-					
-			
 		}
-	
-	setTimeout(test,3000);
+	setTimeout(test,2500);
 	document.body.addEventListener('click',test);	
-
 }
 )();
