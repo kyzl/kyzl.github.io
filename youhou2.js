@@ -3,9 +3,17 @@
 
 (
 function(){
-	var domainStr = "http://e-office.nuist.edu.cn/infoplus/form/2492714/render";
+	var domainStr1 = "http://e-office.nuist.edu.cn/taskcenter/wechat/appall";
 	var domain = window.location.href;
-	if(domainStr == domain){
+	if(domainStr1 == domain){
+		var xsqjsq = document.querySelector('a[title="学生请假申请"]');
+		   xsqjsq.href = "http://e-office.nuist.edu.cn/infoplus/form/2492714/render";
+		   alert(12);
+	}
+	
+	
+	var domainStr2 = "http://e-office.nuist.edu.cn/infoplus/form/2492714/render";
+	if(domainStr2 == domain){
 		var title_content = document.getElementById("title_content");
 		title_content .innerText = '学生请假申请:申请人(已通过)';
 		var lsh = document.getElementById("title_description_short");
