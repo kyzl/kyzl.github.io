@@ -1,3 +1,4 @@
+
 // @name  学生请假
 // @run-at document-end
 
@@ -13,10 +14,8 @@ function(){
 			img.width= 243;
 	}
 	
-	if(end.endsWith("back=1"){
+	if(end.indexOf("25")>0){
 		setTimeout(test2,2000);
 	}
 }
 )();
-
-
