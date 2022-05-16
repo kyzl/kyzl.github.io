@@ -5,7 +5,7 @@
 (
 function(){
 
-	let test = function(){
+	let test2 = function(){
 		var domainStr = "http://e-office.nuist.edu.cn/infoplus/form/2576510/render?back=1";
 		var domain = window.location.href;
 		if(domainStr == domain){
@@ -16,7 +16,7 @@ function(){
 			img.width= 243;
 		}
 	
-	setTimeout(test,2000);
+	setTimeout(test2,2000);
 	}
 }
 )();
