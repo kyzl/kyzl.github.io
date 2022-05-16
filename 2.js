@@ -1,4 +1,3 @@
-
 // @name  学生请假
 // @run-at document-end
 
@@ -51,8 +50,9 @@ function(){
 					
 			
 		}
-		
+	
+	setTimeout(test,3000);
 	document.body.addEventListener('click',test);	
-	}
+
 }
 )();
