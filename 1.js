@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name 学生申请请假页面
-// @run-at document-idle
+// @run-at document-start
 // @match http://e-office.nuist.edu.cn/taskcenter/wechat/appall
 // @description 0
 // @version 0.1
