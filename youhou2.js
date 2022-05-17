@@ -1,12 +1,15 @@
+// ==UserScript==
 // @name  studentQinJia
-// @run-at document-end
-// @match e-office.nuist.edu.cn
+// @run-at document-idle
+// @match e-office.nuist.edu.cn/*
 // @require https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js
-
+// @description 0
+// @version 0.1
+// ==/UserScript==
 (
 function(){
-
 	var domainStr = "http://e-office.nuist.edu.cn/taskcenter/wechat/appall";
+	var domainStr1 = "http://e-office.nuist.edu.cn/taskcenter/refresh";
 	var domain = window.location.href;
 	
 	// 1.学生申请请假页面  将学生申请请假中的链接给更改掉
@@ -15,7 +18,7 @@ function(){
 		 xsqjsq.href = "http://e-office.nuist.edu.cn/infoplus/form/2492714/render";
 	}
 	
-	if(domainStr == domain){
+	if(domainStr == domain || domainStr1 == domain){
 		studentQJ();
 	}
 	
@@ -70,10 +73,9 @@ function(){
 	    subtree: false /*是否把监听的方位放到节点树中的全部子节点上*/
 	};
 	
+	var domain2 = "http://e-office.nuist.edu.cn/infoplus/alive";
 	// 进入请假页面后执行
-	if(domainQjTable == domain){
+	if(domainQjTable == domain || domain == domain2){
 		observer.observe(divLoader, config);
 	}
-	
-}
 )();
