@@ -66,4 +66,5 @@ function(){
 	if(domainQjTable == domain3 || domain3 == domain4){
 		observer.observe(divLoader, config);
 	}
+}
 )();
