@@ -1,4 +1,3 @@
-
 // ==UserScript==
 // @name 学生请假办理
 // @run-at document-start
@@ -8,11 +7,17 @@
 // ==/UserScript==
 (
 function(){
+	
+	var domain0= window.location.href;
+	var domain1= "http://e-office.nuist.edu.cn/infoplus/form/XSQXJSQ/start?back=1&x_posted=true";
 
 	// 1.学生申请请假页面  将学生申请请假中的链接给更改掉
-	let studentQJ = function(){
-		window.location.href = "http://e-office.nuist.edu.cn/infoplus/form/2492714/render";
+	let studentBL = function(){
+		window.location.replace("http://e-office.nuist.edu.cn/infoplus/form/2492714/render"); 
 	}
 	
+	if(domain0 == domain1){
+		studentBL();
+	}
 }
 )();
