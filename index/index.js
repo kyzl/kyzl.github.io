@@ -57,7 +57,7 @@
 			 			 			
 			  let div_yfx = iframe0.getElementById('div_yfx');
 			  div_yfx.remove();
-		  },100);
+		  },50);
 
 
 
