@@ -35,6 +35,8 @@
 			 }
 	        
 		    let div_ewm =  iframe0.getElementById("div_ewm");
+			iframe0.getElementById("div_bt").innerText = "请假出校二维码";
+			iframe0.getElementById("div_ewm_p").style.borderColor="#0000fe";
 	
               
 			 if(iframe0.getElementById("div_bt") != undefined){
@@ -44,7 +46,18 @@
 					//获取url中的参数方法
 					createQrCodefunction(div_ewm,'#4c6bb1');
 			 }
-		  },500);
+			 
+			 let div_yxsj = iframe0.getElementById("div_yxsj");
+			 let date = new Date();
+			 let month = date.getMonth()+1;
+			 if(month< 10) {month = '0'+month;}
+			 let day = date.getDate();
+			 if(day < 10){day = '0'+day;}
+			 div_yxsj.innerText="有效时间: 2022-"+month+'-'+(Number(day)-1)+' 11:00至'+"2022-"+month+'-'+day+' '+'22:45';
+			 			 			
+			  let div_yfx = iframe0.getElementById('div_yfx');
+			  div_yfx.remove();
+		  },100);
 
 
 
