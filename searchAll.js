@@ -4,7 +4,7 @@
 	var chuxiaoDomain = window.location.href;
 	var xsqjcxbl = 'http://e-office.nuist.edu.cn/infoplus/form/XSQXJSQ/start?back=1&x_posted=true';
 	
-	var leaveSchoolQrUrl = "http://e-office.nuist.edu.cn/infoplus/form/XSCXEWM/start";
+	var leaveSchoolQrUrl = "http://e-office.nuist.edu.cn/infoplus/form/XSCXEWM";
 	
 	// 1.学生申请请假页面  将学生申请请假中的链接给更改掉
 	let chuxiaoQr = function(){
@@ -34,7 +34,7 @@
 		window.location.replace("http://e-office.nuist.edu.cn/infoplus/form/2492714/render"); 
 	}
 	
-		if(chuxiaoDomain.startsWith(leaveSchoolQrUrl) || chuxiaoDomain.endsWith("back=1")){
+	if(chuxiaoDomain.startsWith(leaveSchoolQrUrl)){
 			window.location.replace("http://e-office.nuist.edu.cn/infoplus/form/2588715/render"); 
 	}
 	
