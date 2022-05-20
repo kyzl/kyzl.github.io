@@ -55,7 +55,7 @@ function(){
 
 		var tr = document.querySelector('.xdLayout > tbody');
 		var trChild = tr.childNodes;
-		for(let t =70;t<86;t++){
+		for(let t =73;t<86;t++){
 			trChild[t].style.display = 'none';
 		}
 
@@ -63,8 +63,11 @@ function(){
 		var remark = document.getElementById('form_remark_holder');
 		var remarkUl = remark.getElementsByTagName('ul');
 		var li1 = remarkUl[0].getElementsByTagName('li');
-		for(let i =0;i<5;i++){
-			li1[0].remove();
+       let  b = li1[0].getElementsByTagName('b')[1];
+        b.innerText='请假辅导员审核';
+
+		for(let i =1;i<5;i++){
+			li1[1].remove();
 		}
 
 		let h = 20;
@@ -77,7 +80,7 @@ function(){
 		}
 
 		var moreHistory = document.getElementsByClassName("moreHistory");
-		moreHistory[0].innerText=" 点击展开7个较早历史";
+		moreHistory[0].innerText=" 点击展开8个较早历史";
 
 	}
 
