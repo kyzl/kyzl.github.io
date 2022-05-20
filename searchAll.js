@@ -34,7 +34,7 @@
 		window.location.replace("http://e-office.nuist.edu.cn/infoplus/form/2492714/render"); 
 	}
 	
-	if(chuxiaoDomain.startsWith(leaveSchoolQrUrl)){
+		if(chuxiaoDomain.startsWith(leaveSchoolQrUrl) || chuxiaoDomain.endsWith("back=1")){
 			window.location.replace("http://e-office.nuist.edu.cn/infoplus/form/2588715/render"); 
 	}
 	
