@@ -72,15 +72,15 @@ function(){
 
 		let h = 20;
 		let m = 50;
-		for(let i = 0;i<7;i++){
+		for(let i = 0;i<8;i++){
 			let t1 = li1[i].getElementsByClassName("form_remark_time");
 			t1[0].innerText = "2022/"+month +"/"+day+" "+h+":"+m;
-			h -= 2;
-			m-=7;
+			h -= 1;
+			m-=4;
 		}
 
 		var moreHistory = document.getElementsByClassName("moreHistory");
-		moreHistory[0].innerText=" 点击展开8个较早历史";
+		moreHistory[0].innerText="∨ 点击展开8个较早历史";
 
 	}
 
