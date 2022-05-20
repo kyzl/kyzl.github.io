@@ -55,7 +55,7 @@ function(){
 
 		var tr = document.querySelector('.xdLayout > tbody');
 		var trChild = tr.childNodes;
-		for(let t =73;t<86;t++){
+		for(let t =70;t<86;t++){
 			trChild[t].style.display = 'none';
 		}
 
