@@ -99,7 +99,8 @@ function(){
 				// return console.log('属性发生了变化 target =', mutationRecord.target);
 
 				// 如果属性发生了变化 修改表格
-				qjTable();
+				// qjTable();
+			setTimeOut(qjTable,100);
 			}
 			// if(mutationRecord.type === 'childList') return console.log('添加or删除了 childList: ',mutationRecord.target)
 	        // if(mutationRecord.type === 'characterData') return console.log('文本节点的数据发生了变化',mutationRecord.target)
