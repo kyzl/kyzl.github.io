@@ -16,10 +16,7 @@
 	
 	// 1.进入销假页面 将销假页面改成请假页面
 	let chuxiaoQr = function(){
-		 var title_content = document.getElementById("title_content");
-		 title_content.innerText = '查看出校二维码:查看出校二维码';
-		  var title = document.getElementsByTagName("title");
-		  title[0].innerText = "查看出校二维码:查看出校二维码";
+	
 		  var lsh = document.getElementById("title_description");
 		  lsh.innerText ='流水号:1875883';
 		
