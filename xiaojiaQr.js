@@ -30,7 +30,7 @@
 			 }
 	        
 		    let div_ewm =  iframe0.getElementById("div_ewm");
-			iframe0.getElementById("div_ewm_p").style.borderColor="#0000fe";
+			iframe0.getElementById("div_ewm_p").style.borderColor=" #4EB16E";
 	
               
 			 if(iframe0.getElementById("div_bt") != undefined){
@@ -38,7 +38,7 @@
 
 					 $(div_ewm).empty();
 					//获取url中的参数方法
-					createQrCodefunction(div_ewm,'#4c6bb1');
+					createQrCodefunction(div_ewm,' #4EB16E');
 			 }
 			 
 			 let div_yxsj = iframe0.getElementById("div_yxsj");
