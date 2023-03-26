@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>可展开列表</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #ddd;
+        }
+
+        ul ul {
+            display: none;
+            margin-left: 20px;
+        }
+
+        li.opened > ul {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleList(event) {
+            var li = event.target.closest("li");
+            if (li.classList.contains("opened")) {
+                li.classList.remove("opened");
+            } else {
+                li.classList.add("opened");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>可展开列表</h1>
+
+    <ul>
+        <li onclick="toggleList(event)">列表1
+            <ul>
+                <li>列表1 - 项1</li>
+                <li>列表1 - 项2</li>
+                <li>列表1 - 项3</li>
+            </ul>
+        </li>
+
+        <li onclick="toggleList(event)">列表2
+            <ul>
+                <li>列表2 - 项1</li>
+                <li>列表2 - 项2</li>
+                <li>列表2 - 项3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
