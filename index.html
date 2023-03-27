@@ -37,14 +37,59 @@ OL LI {
 	BORDER-RIGHT: #aecbd4 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #aecbd4 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; BORDER-LEFT: #aecbd4 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #aecbd4 1px solid; BACKGROUND-COLOR: #fff
 }
 .tagContent {
-	PADDING-RIGHT: 10px; DISPLAY: none; PADDING-LEFT: 10px; BACKGROUND: url(images/bg.gif) repeat-x; PADDING-BOTTOM: 10px; WIDTH: 976px; COLOR: #474747; PADDING-TOP: 10px; HEIGHT: 880px
+	PADDING-RIGHT: 10px; DISPLAY: none; PADDING-LEFT: 10px; BACKGROUND: url(images/bg.gif) repeat-x; PADDING-BOTTOM: 10px; WIDTH: 976px; COLOR: #474747; PADDING-TOP: 10px; HEIGHT: 1500px
 }
 #tagContent DIV.selectTag {
 	DISPLAY: block
 }
+
+
+/*  安装步骤  */
+ #installSteps {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .step {
+            background-color: #ffffff;
+            border: 1px solid #aecbd4;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .step:hover {
+            background-color: #eff8fb;
+        }
+
+        .step> ul {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .step.opened > ul {
+            display: block;
+        }
+
 </style>
 
-<meta content="MSHTML 6.00.2800.1589" name="GENERATOR"></head>
+<meta content="MSHTML 6.00.2800.1589" name="GENERATOR">
+    <script>
+        function toggleList(event) {
+            var li = event.target.closest(".step");
+            if (li.classList.contains("opened")) {
+                li.classList.remove("opened");
+            } else {
+                li.classList.add("opened");
+            }
+        }
+    </script>
+
+
+
+
+</head>
 <body>
 <div id="con">
 <ul id="tags">
@@ -66,6 +111,35 @@ OL LI {
 <p></p><center><img src="images/1-1.png"></center><p></p>
 
 
+    <ul id="installSteps">
+		
+		<li onclick="toggleList(event)" class="step" id="desktopStep">  <font size="5" color="red">❶电脑安装</font>
+		  
+		   <ul style="font-family: 微软雅黑;font-size: 1.2em;">
+			    <p></p>
+			  可以直接到苹果应用商店搜索“题库通”直接安装
+		   </ul>
+		</li>
+		
+        <li onclick="toggleList(event)" class="step" id= "androidStep"><font size="5" color="red">❷安卓手机安装步骤</font>  
+          <ul class="">
+		  <video autoplay="autoplay" controls>
+			  <source src="videos/androidstep.mp4"></source>
+			  
+		  </video>
+		  </ul>
+        </li>
+
+        <li onclick="toggleList(event)" class="step" > <font size="5" color="red">❸苹果手机安装</font>  
+          
+		   <ul style="font-family: 微软雅黑;font-size: 1.2em;">
+			    <p></p>
+			  可以直接到苹果应用商店搜索“题库通”直接安装
+		   </ul>
+        </li>
+		
+		
+    </ul>
 
  
 </font></div><font size="4">
@@ -91,8 +165,21 @@ OL LI {
 
 </font></div></div><font size="4">
 
+
+
+
+
+
+
+
+
+
 <p>
   <script type="text/javascript">
+	  
+	  
+	  
+	  
 function selectTag(showContent,selfObj){
 	
 	
@@ -124,6 +211,9 @@ function selectTag(showContent,selfObj){
 	
 	document.getElementById(showContent).style.display = "block";
 }
+
+  // 播放设置
+  document.getElementById("desktopStep").click();
 
 </script>
 </p>
