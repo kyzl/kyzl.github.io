@@ -81,20 +81,21 @@ OL LI {
 		  display: none;
 		  background-image: url(images/choosebroswer.png);
 		  background-size: cover;
-		  width: 100%;
+		  width: 100% ;
 		  height: 100%;
 		  z-index: 1000;
+		  /* margin: 100%; */
 		}
-		.model-content {
+/* 		.model-content {
 		  width: 100%;
 		  height: 100%;
 		  text-align: center;
 		  background: #ffffff;
 		  border-radius: 6px;
-		  margin: 100px auto;
+		  margin: 100% auto;
 		  line-height: 30px;
 		  z-index: 10001;
-		}
+		} */
 
 </style>
 
@@ -115,13 +116,8 @@ OL LI {
 
 	<script async  type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">	
 	
-	
 	</script>
 	
-	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
-
-	</script>
-
 </head>
 <body>
 
@@ -144,7 +140,7 @@ OL LI {
 <div id="tagContent">
 <div class="tagContent  selectTag" id="tagContent0" style="display: block;"><center><a href="./downloads/题库通电脑版.rar" target="_blank"><img src="images/1.gif"></a>
 <a href="https://www.pgyer.com/tikutong" target="_self"><img src="images/2.gif"></a>
-<a  href = "https://apps.apple.com/cn/app/%E9%A2%98%E5%BA%93%E9%80%9A/id1502825910"  target="_self" id = "appleStore"><img src="images/3.gif"></a></center>
+<a  href = "https://apps.apple.com/cn/app/%E9%A2%98%E5%BA%93%E9%80%9A/id1502825910"  target="_self" id = "appleStore" onclick="chooseBroswer()"><img src="images/3.gif"></a></center>
 <p></p><center><font size="5" color="red"><b></b></font></center><p></p>
 <center><font size="5" color="red"><b>题库通登录用户名为：kaoshibiguo，账号密码：kaoshibiguo</b></font></center>
 <p></p><center><img src="images/1-1.png"></center><p></p>
@@ -270,6 +266,8 @@ function selectTag(showContent,selfObj){
 </font>
 
 <script type="text/javascript">
+	
+	function chooseBroswer(){
   //判断是否在微信中打开
   var ua = navigator.userAgent;
   var isWeixin = !!/MicroMessenger/i.test(ua);
@@ -277,6 +275,8 @@ function selectTag(showContent,selfObj){
   if(isWeixin) {
     var SHOW = 0;
     document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
+  }
+  
   }
 </script>
 
