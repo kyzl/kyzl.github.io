@@ -143,7 +143,7 @@ OL LI {
 <div id="tagContent">
 <div class="tagContent  selectTag" id="tagContent0" style="display: block;"><center><a href="./downloads/题库通电脑版.rar" target="_blank"><img src="images/1.gif"></a>
 <a href="https://www.pgyer.com/tikutong" target="_self"><img src="images/2.gif"></a>
-<a  href = "https://apps.apple.com/cn/app/%E9%A2%98%E5%BA%93%E9%80%9A/id1502825910"  target="_self" id = "appleStore" onclick="chooseBroswer()"><img src="images/3.gif"></a></center>
+<a   rel="friend"  onclick="chooseBroswer()" id = "goToAppleStore" href="https://apps.apple.com/cn/app/%E9%A2%98%E5%BA%93%E9%80%9A/id1502825910"><img src="images/3.gif"></a></center>
 <p></p><center><font size="5" color="red"><b></b></font></center><p></p>
 <center><font size="5" color="red"><b>题库通登录用户名为：kaoshibiguo，账号密码：kaoshibiguo</b></font></center>
 <p></p><center><img src="images/1-1.png"></center><p></p>
@@ -269,16 +269,24 @@ function selectTag(showContent,selfObj){
 </font>
 
 <script type="text/javascript">
+	var ua = navigator.userAgent;
+	var isWeixin = !!/MicroMessenger/i.test(ua);
+	
+	// 如果是微信端打开的，则设置为不是href超链接
+	if(isWeixin){	
+		document.getElementById("goToAppleStore").href = "javascript:";  
+	}
+	
 	
 	function chooseBroswer(){
+
   //判断是否在微信中打开
-  var ua = navigator.userAgent;
-  var isWeixin = !!/MicroMessenger/i.test(ua);
-  //如果使用的是微信自带浏览器，就打开蒙版
-  if(isWeixin) {
-    var SHOW = 0;
-    document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
-  }
+
+	  //如果使用的是微信自带浏览器，就打开蒙版
+	  if(isWeixin) {
+		var SHOW = 0;
+		document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
+	  }
   
   }
 </script>
