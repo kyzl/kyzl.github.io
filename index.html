@@ -76,15 +76,17 @@ OL LI {
 		/* //蒙板样式 */
 		#Mask {
 		  position: absolute;
-		  top: 0;
-		  left: 0;
+		  /* top: 0; */
+		  /* left: 1%; */
 		  display: none;
-		  background-image: url(images/choosebroswer.png);
+		  background-image: url(images/choosebroswer1.png);
 		  background-size: cover;
-		  width: 100% ;
+		  
+		  width: 1000px ;
 		  height: 100%;
 		  z-index: 1000;
-		  /* margin: 100%; */
+		  /* margin: auto 100%; */
+		  margin: 0 auto;
 		}
 /* 		.model-content {
 		  width: 100%;
@@ -123,6 +125,7 @@ OL LI {
 
 	<!--引入遮蔽层  添加蒙板 用于提示用户使用手机浏览器打开-->  
 	<div id="Mask" >
+		<div class =""></div>
 	</div>
 	
 	
@@ -272,7 +275,7 @@ function selectTag(showContent,selfObj){
   var ua = navigator.userAgent;
   var isWeixin = !!/MicroMessenger/i.test(ua);
   //如果使用的是微信自带浏览器，就打开蒙版
-  if(isWeixin) {
+  if(1) {
     var SHOW = 0;
     document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
   }
