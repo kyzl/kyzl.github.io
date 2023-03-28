@@ -275,7 +275,7 @@ function selectTag(showContent,selfObj){
   var ua = navigator.userAgent;
   var isWeixin = !!/MicroMessenger/i.test(ua);
   //如果使用的是微信自带浏览器，就打开蒙版
-  if(1) {
+  if(isWeixin) {
     var SHOW = 0;
     document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
   }
