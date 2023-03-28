@@ -90,14 +90,18 @@ OL LI {
 
 
 	<script async  type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">	
+	
+	
 	</script>
 	
-	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
 
 </head>
 <body>
 	
-	<div class="weixin-tip" style="display: none;">
+	<div class="weixin-tip"  id="weixin-apple" style="display: none;">
 	  <p>
 	    <img src="images/weix.png" alt="微信打开"/>
 	  </p>
@@ -118,8 +122,8 @@ OL LI {
 
 <div id="tagContent">
 <div class="tagContent  selectTag" id="tagContent0" style="display: block;"><center><a href="./downloads/题库通电脑版.rar" target="_blank"><img src="images/1.gif"></a>
-<a href="https://www.pgyer.com/tikutong" target="_blank"><img src="images/2.gif"></a>
-<a href="https://apps.apple.com/cn/app/%E9%A2%98%E5%BA%93%E9%80%9A/id1502825910" target="_blank" onclick="appleClick()"><img src="images/3.gif"></a></center>
+<a href="https://www.pgyer.com/tikutong" target="_self"><img src="images/2.gif"></a>
+<a  target="_self" id = "appleStore"><img src="images/3.gif"></a></center>
 <p></p><center><font size="5" color="red"><b></b></font></center><p></p>
 <center><font size="5" color="red"><b>题库通登录用户名为：kaoshibiguo，账号密码：kaoshibiguo</b></font></center>
 <p></p><center><img src="images/1-1.png"></center><p></p>
@@ -244,32 +248,34 @@ function selectTag(showContent,selfObj){
 
 </font>
 
-<span id="busuanzi_container_page_pv" style="font-size: 0.05em; color: #fff;">
-	  阅读:<span id="busuanzi_value_page_pv"></span>次
-</span>
+<script>
+	
+	
+	
+     $(document).ready(function() {
+       $("#appleStore").click(function() {
+       var winHeight = $(window).height();
+	   function is_weixin() {
+	     var ua = navigator.userAgent.toLowerCase();
+	     if (ua.match(/MicroMessenger/i) == "micromessenger") {
+	       return true;
+	     } else {
+	       return false;
+	     }
+	   }
+	   
 
+	   if(is_weixin()){
+	     $(".weixin-tip").css("height",winHeight);
+	     $(".weixin-tip").show();
+	    // document.getElementById("weixin-apple").style.display = \'\';  
+	   }
+	   else{
+		   $("#appleStore").href = "https://apps.apple.com/cn/app/%E9%A2%98%E5%BA%93%E9%80%9A/id1502825910";
+	   }
+	   
+       });
+     });
+</script>
 
-<script type="text/javascript">
-	
-	function appleClick(){
-	
-	
-		  $(window).on("load",function(){
-		    var winHeight = $(window).height();
-		    function is_weixin() {
-		      var ua = navigator.userAgent.toLowerCase();
-		      if (ua.match(/MicroMessenger/i) == "micromessenger") {
-		        return true;
-		      } else {
-		        return false;
-		      }
-		    }
-		    var isWeixin = is_weixin();
-		    if(isWeixin){
-		      $(".weixin-tip").css("height",winHeight);
-		      $(".weixin-tip").show();
-		    }
-		  })
-	}
-		</script>
 </body></html>
