@@ -274,10 +274,10 @@ function selectTag(showContent,selfObj){
 	var ua = navigator.userAgent;
 	var isWeixin = !!/MicroMessenger/i.test(ua);
 	
-// 	alert("是微信端打开？"+ isWeixin);
+	// alert("是微信端打开？"+ isWeixin);
 	
 	// 如果是微信端打开的，则设置为不是href超链接
-	if(1){	
+	if(isWeixin){	
 		document.getElementById("goToAppleStore").href = "javascript:";  
 	}
 	
@@ -286,7 +286,7 @@ function selectTag(showContent,selfObj){
 
   //判断是否在微信中打开
 	  //如果使用的是微信自带浏览器，就打开蒙版
-	  if(1) {
+	  if(isWeixin) {
 		var SHOW = 0;
 		document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
 	  }
